@@ -15,7 +15,7 @@
 
 .img {
     top: -110px;
-    right: 50px;
+    right: 600px;
     z-index: 1000;
     position: absolute;
     pointer-events: none;
@@ -26,8 +26,8 @@
     position: absolute;
     background-color: #00aeff;
 
-    right: 400px;
-    width: 96vh;
+    right: 970px;
+    width: 88vh;
 
     transition: height 15s ease;
     bottom: -718px;

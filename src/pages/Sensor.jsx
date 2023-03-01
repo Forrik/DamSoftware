@@ -47,10 +47,7 @@ const Sensor = ({ num }) => {
   return (
     <>
       {isError && !isErrorIgnoring && (
-        <ErrorModalSecond
-          repairErrorCallBack={repairError}
-          ignoreErrorCallBack={ignoreError}
-        />
+        <ErrorModalSecond repairErrorCallBack={repairError} ignoreErrorCallBack={ignoreError} />
       )}
 
       <div className="sensors--items">

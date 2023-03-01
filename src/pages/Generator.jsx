@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react";
-import style from "./Example/Example.module.css";
+import style from "./Example/Example.css";
 
 const Generator = (props) => {
   const value = Math.random() > Math.random();
 
-  const [num, setNum] = useState(50);
-
+  const [num, setNum] = useState(75);
+  const [errorColor, setErrorColor] = useState("ok");
   function randomNumberInRange(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
   }
@@ -14,11 +14,13 @@ const Generator = (props) => {
     console.log(props);
     const interval = setInterval(() => {
       if (props.isError) {
-        setNum(randomNumberInRange(110, 130));
+        setNum(randomNumberInRange(90, 100));
+        setErrorColor("error");
       } else {
-        setNum(randomNumberInRange(50, 85));
+        setNum(randomNumberInRange(75, 85));
+        setErrorColor("ok");
       }
-    }, 1000);
+    }, 2500);
 
     return () => {
       clearInterval(interval);
@@ -27,11 +29,11 @@ const Generator = (props) => {
 
   return (
     <div>
-      <div className={style.wrapper}>
-        <div className={style.card}></div>
+      <div className="wrapper">
+        <div className="card"></div>
       </div>
 
-      <h2 className={style.titleh2}>{num}</h2>
+      <h2 className={`errorTitle ${errorColor}`}>{num}</h2>
     </div>
   );
 };

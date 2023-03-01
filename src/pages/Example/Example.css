@@ -67,4 +67,18 @@ svg circle:nth-child(2) {
 
 .titleh2 {
     margin-top: 25px;
+
+}
+
+.errorTitle {
+    margin-top: 25px;
+}
+
+.errorTitle.ok {
+    color: #0426EA !important;
+}
+
+
+.errorTitle.error {
+    color: red !important;
 }
